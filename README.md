@@ -5,7 +5,7 @@
 ![](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0701EN-SkillsNetwork/api/Images/landing_1.gif)
 
 ## Background
-SpaceX, a leader in the space industry, strives to make space travel affordable for everyone. Its accomplishments include sending spacecraft to the international space station, launching a satellite constellation that provides internet access and sending manned missions to space. SpaceX can do this because the rocket launches are relatively inexpensive ($62 million per launch) due to its novel reuse of the first stage of its Falcon 9 rocket. Other providers, which are not able to reuse the first stage, cost upwards of $165 million each. By determining if the first stage will land, we can determine the price of the launch. To do this, we can use public data and machine learning models to predict whether SpaceX – or a competing company – can reuse the first stage.
+SpaceX, a pioneering force in the space industry, is committed to democratizing space travel by striving to make it affordable for everyone. Their remarkable achievements encompass missions such as sending spacecraft to the International Space Station, deploying a satellite constellation for global internet access, and conducting crewed missions to space. SpaceX's ability to achieve these feats is attributed to the cost-effectiveness of their rocket launches, priced at $62 million per launch. This affordability is primarily due to their innovative approach of reusing the first stage of the Falcon 9 rocket. In contrast, other space providers, unable to replicate this reusability, have launch costs that soar to over $165 million per mission. The key to determining the launch price hinges on predicting the successful recovery of the first stage, a task that can be accomplished by leveraging publicly available data and employing machine learning models. This prediction allows for a more precise evaluation of whether SpaceX or a competing company can reutilize the crucial first stage.
 
 ## Explore
 * How payload mass, launch site, number of flights, and orbits affect first-stage landing success
@@ -25,18 +25,17 @@ The research attempts to identify the factors for a successful rocket landing. T
 ## Results
 
 ### Exploratory Data Analysis:
-* Launch success has improved over time
-* KSC LC-39A has the highest success rate among landing sites
-* Orbits ES-L1, GEO, HEO, and SSO have a 100% success rate
+* Over time, there has been a noticeable enhancement in launch success rates.
+* Among the various landing sites, KSC LC-39A stands out with the highest rate of success.
+* The orbits ES-L1, GEO, HEO, and SSO have all maintained a flawless track record with a 100% success rate.
 
-### Visualization / Analytics:
+### Visualization:
 * Most launch sites are near the equator, and all are close to the coast
 
 ### Predictive Analytics
 * All models performed similarly on the test set. The decision tree model slightly outperformed when looking at .best_score_
 
 # Methodology
-
 ## Data Collection - API
 * **Request data** from SpaceX API (rocket launch data)
 * **Decode response** using .json() and convert to a dataframe using .json_normalize()
@@ -58,12 +57,6 @@ The research attempts to identify the factors for a successful rocket landing. T
 
 ## Data Wrangling
 * **Convert outcomes** into 1 for a successful landing and 0 for an unsuccessful landing
-
-## EDA with Visualization
-* **Create charts** to analyze relationships and show comparisons
-
-## EDA with SQL
-* **Query the data** to understand more about the data
 
 ## Maps with Folium
 * **Create maps** to visualize launch sites, view launch outcomes and see distance to proximities
@@ -91,12 +84,6 @@ The research attempts to identify the factors for a successful rocket landing. T
 * **KSC LC-39A:** Has the highest success rate among launch sites. Has a 100% success rate for launches less than 5,500 kg 
 * **Orbits:** ES-L1, GEO, HEO, and SSO have a 100% success rate
 * **Payload Mass:** Across all launch sites, the higher the payload mass (kg), the higher the success rate
-
-## Additional Things to Consider
-* **Dataset:** A larger dataset will help build on the predictive analytics results to help understand if the findings can be generalizable to a larger data set
-* **Feature Analysis / PCA:** Additional feature analysis or principal component analysis should be conducted to see if it can help improve accuracy
-* **XGBoost:** Is a powerful model which was not utilized in this study. It would be interesting to see if it outperforms the other classification models
-
 
 
 
