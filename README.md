@@ -37,23 +37,25 @@ The research attempts to identify the factors for a successful rocket landing. T
 
 # Methodology
 ## Data Collection - API
-* **Request data** from SpaceX API (rocket launch data)
-* **Decode response** using .json() and convert to a dataframe using .json_normalize()
-* **Request information** about the launches from SpaceX API using custom functions
-* **Create dictionary** from the data
-* **Create dataframe** from the dictionary
-* **Filter dataframe** to contain only Falcon 9 launches
-* **Replace missing values** of Payload Mass with calculated .mean()
-* **Export data** to csv file
 
-## Data Collection - Web Scraping
-* **Request data** (Falcon 9 launch data) from Wikipedia
-* **Create BeautifulSoup object** from HTML response
-* **Extract column names** from HTML table header
-* **Collect data** from parsing HTML tables
-* **Create dictionary** from the data
-* **Create dataframe** from the dictionary
-* **Export data** to csv file
+* **Request Data**: Retrieve rocket launch data from the SpaceX API through API requests.
+* **Decode Response**: Decode the received API response using `.json()` and convert it into a DataFrame using `.json_normalize()`.
+* **Custom Functions**: Use custom functions to gather specific launch information from the SpaceX API.
+* **Create Dictionary**: Organize the collected data into a dictionary.
+* **Create DataFrame**: Transform the dictionary into a DataFrame for structured data analysis.
+* **Filter Falcon 9 Launches**: Apply a filter to the DataFrame, keeping only Falcon 9 launch data.
+* **Replace Missing Payload Mass Values**: If any payload mass values are missing, fill them with the calculated mean.
+* **Export to CSV**: Save the processed data as a CSV file for future reference.
+
+## Web Scraping Data Collection
+
+* **Request Data**: Fetch Falcon 9 launch data from a Wikipedia page using web scraping techniques.
+* **Create BeautifulSoup Object**: Parse the HTML response into a BeautifulSoup object for structured data extraction.
+* **Extract Column Names**: Identify and extract column names from the HTML table header.
+* **Collect Data from HTML Tables**: Parse HTML tables to gather information about Falcon 9 launches.
+* **Create Dictionary**: Structure the scraped data into a dictionary.
+* **Create DataFrame**: Convert the dictionary into a DataFrame for organized data analysis.
+* **Export to CSV**: Save the web-scraped data as a CSV file for storage and future analysis.
 
 ## Data Wrangling
 * **Convert outcomes** into 1 for a successful landing and 0 for an unsuccessful landing
@@ -67,24 +69,25 @@ The research attempts to identify the factors for a successful rocket landing. T
 * Scatter chart showing Payload Mass vs. Success Rate by Booster Version
 
 ## Predictive Analytics
-* **Create** NumPy array from the Class column
-* **Standardize** the data with StandardScaler. Fit and transform the data.
-* **Split** the data using train_test_split
-* **Create** a GridSearchCV object with cv=10 for parameter optimization
-* **Apply** GridSearchCV on different algorithms: logistic regression (LogisticRegression()), support vector machine (SVC()), decision tree (DecisionTreeClassifier()), K-Nearest Neighbor (KNeighborsClassifier())
-* **Calculate** accuracy on the test data using .score() for all models
-* **Assess** the confusion matrix for all models
-* **Identify** the best model using Jaccard_Score, F1_Score and Accuracy
+
+* **Create NumPy Array**: Generate a NumPy array from the Class column.
+* **Standardize Data**: Apply data standardization using StandardScaler. Fit and transform the data.
+* **Split Data**: Divide the data into training and testing sets using train_test_split.
+* **GridSearchCV Optimization**: Construct a GridSearchCV object with 10-fold cross-validation for parameter optimization.
+* **Apply GridSearchCV**: Utilize GridSearchCV to evaluate various algorithms, including logistic regression (LogisticRegression()), support vector machine (SVC()), decision tree (DecisionTreeClassifier()), and K-Nearest Neighbor (KNeighborsClassifier()).
+* **Accuracy Calculation**: Calculate the accuracy on the test data for all models using the .score() method.
+* **Confusion Matrix Assessment**: Assess the confusion matrix for each model.
+* **Best Model Identification**: Identify the best model based on Jaccard Score, F1 Score, and overall Accuracy.
 
 # Conclusion
-* **Model Performance:** The models performed similarly on the test set with the decision tree model slightly outperforming
-* **Equator:** Most of the launch sites are near the equator for an additional natural boost - due to the rotational speed of earth - which helps save the cost of putting in extra fuel and boosters
-* **Coast:** All the launch sites are close to the coast
-* **Launch Success:** Increases over time
-* **KSC LC-39A:** Has the highest success rate among launch sites. Has a 100% success rate for launches less than 5,500 kg 
-* **Orbits:** ES-L1, GEO, HEO, and SSO have a 100% success rate
-* **Payload Mass:** Across all launch sites, the higher the payload mass (kg), the higher the success rate
 
+* **Model Performance**: The models demonstrated comparable performance on the test dataset, with a slight advantage observed for the decision tree model.
+* **Equatorial Advantage**: Notably, most launch sites are situated near the equator, capitalizing on the natural rotational speed of the Earth. This proximity helps reduce the need for additional fuel and boosters, enhancing cost-efficiency.
+* **Proximity to Coast**: All launch sites are strategically located near coastal regions.
+* **Launch Success Trend**: There is a discernible trend of increasing launch success rates over time.
+* **KSC LC-39A Success**: KSC LC-39A stands out with the highest success rate among launch sites. Notably, it boasts a 100% success rate for launches with payloads less than 5,500 kg.
+* **Orbit Success**: Orbits such as ES-L1, GEO, HEO, and SSO exhibit a remarkable 100% success rate.
+* **Payload Mass Influence**: Across all launch sites, there is a clear correlation between higher payload mass (kg) and increased launch success rates.
 
 
 
