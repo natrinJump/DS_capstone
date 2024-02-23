@@ -2,17 +2,12 @@
 
 # Introduction
 
-![](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0701EN-SkillsNetwork/api/Images/landing_1.gif)
+![image](https://github.com/natrinJump/IBM_DataScience_CapStone_SpaceX/assets/143831822/9478a22d-ae1e-4ba1-b276-fe16e5e8855d)
 
 ## Background
 SpaceX, a pioneering force in the space industry, is committed to democratizing space travel by striving to make it affordable for everyone. Their remarkable achievements encompass missions such as sending spacecraft to the International Space Station, deploying a satellite constellation for global internet access, and conducting crewed missions to space. SpaceX's ability to achieve these feats is attributed to the cost-effectiveness of their rocket launches, priced at $62 million per launch. This affordability is primarily due to their innovative approach of reusing the first stage of the Falcon 9 rocket. In contrast, other space providers, unable to replicate this reusability, have launch costs that soar to over $165 million per mission. The key to determining the launch price hinges on predicting the successful recovery of the first stage, a task that can be accomplished by leveraging publicly available data and employing machine learning models. This prediction allows for a more precise evaluation of whether SpaceX or a competing company can reutilize the crucial first stage.
 
-## Explore
-* How payload mass, launch site, number of flights, and orbits affect first-stage landing success
-* Rate of successful landings over time
-* Best predictive model for successful landing (binary classification)
-
-## Executive Summary
+## Summary
 The research attempts to identify the factors for a successful rocket landing. To make this determination, the following methodologies where used:
 * **Collect** data using SpaceX REST API and web scraping techniques
 * **Wrangle** data to create success/fail outcome variable
@@ -28,9 +23,6 @@ The research attempts to identify the factors for a successful rocket landing. T
 * Over time, there has been a noticeable enhancement in launch success rates.
 * Among the various landing sites, KSC LC-39A stands out with the highest rate of success.
 * The orbits ES-L1, GEO, HEO, and SSO have all maintained a flawless track record with a 100% success rate.
-
-### Visualization:
-* Most launch sites are near the equator, and all are close to the coast
 
 ### Predictive Analytics
 * All models performed similarly on the test set. The decision tree model slightly outperformed when looking at .best_score_
